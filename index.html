@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Dulce Hogar: recetas caseras, repostería, postres y consejos para disfrutar creando algo dulce.">
+  <meta name="theme-color" content="#fff4f8">
+  <title>Dulce Hogar | Recetas y repostería</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="dh">
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Dulce Hogar, inicio">
+      <span class="brand-icon">🧁</span><span>Dulce Hogar<small>RECETAS CON UN TOQUE DE AMOR</small></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">☰</button>
+    <nav class="nav" id="mainNav" aria-label="Navegación principal">
+      <a href="#inicio" data-page="inicio">Inicio</a>
+      <a href="#recetas" data-page="recetas">Recetas</a>
+      <a href="#consejos" data-page="consejos">Consejos</a>
+      <a href="#calendario" data-page="calendario">Calendario</a>
+      <a href="#sobre-mi" data-page="sobre-mi">Sobre mí</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="page" id="page-inicio">
+      <div class="hero">
+        <div class="hero-copy">
+          <span class="eyebrow">UN RINCÓN PARA LOS AMANTES DE LO DULCE</span>
+          <h1>Un poquito de dulzura hace todo mejor.</h1>
+          <p>Bienvenida a <strong>Dulce Hogar</strong>, un espacio para descubrir recetas, aprender técnicas de repostería y llenar la cocina de aromas deliciosos.</p>
+          <a class="button" href="#recetas">Explorar recetas <span>→</span></a>
+        </div>
+        <div class="hero-art" role="img" aria-label="Ilustración decorativa de un pastel">
+          <div class="cake">🍰</div><span class="sparkle s1">✦</span><span class="sparkle s2">✧</span><span class="sparkle s3">♡</span>
+        </div>
+      </div>
+
+      <div class="welcome-note">
+        <span>🌷</span><p>«La repostería es una forma bonita de compartir cariño, un ingrediente a la vez».</p>
+      </div>
+
+      <div class="section-heading">
+        <div><span class="eyebrow">PARA EMPEZAR</span><h2>Un mundo de recetas</h2></div>
+        <a class="text-link" href="#recetas">Ver todas →</a>
+      </div>
+      <div class="feature-grid">
+        <a class="feature-card pink" href="#recetas"><span class="feature-emoji">🎂</span><h3>Bizcochos y tartas</h3><p>Ideas para celebraciones y antojos.</p></a>
+        <a class="feature-card lilac" href="#recetas"><span class="feature-emoji">🍪</span><h3>Galletas y bocaditos</h3><p>Pequeñas delicias para cualquier día.</p></a>
+        <a class="feature-card green" href="#recetas"><span class="feature-emoji">🍮</span><h3>Postres cremosos</h3><p>Flanes, mousses y mucho más.</p></a>
+      </div>
+
+      <div class="section-heading">
+        <div><span class="eyebrow">HECHAS PARA DISFRUTAR</span><h2>Recetas destacadas</h2></div>
+      </div>
+      <div class="recipe-grid" id="homeRecipes"></div>
+      <div class="newsletter">
+        <div><span class="eyebrow">UN CONSEJITO DULCE</span><h2>La paciencia también es un ingrediente.</h2><p>Lee cada receta completa antes de empezar, prepara tus ingredientes y disfruta el proceso.</p></div>
+        <span class="newsletter-emoji">🥄</span>
+      </div>
+    </section>
+
+    <section class="page" id="page-recetas" hidden>
+      <div class="page-intro"><span class="eyebrow">EL RECETARIO</span><h1>Recetas para endulzar tus días</h1><p>Encuentra algo rico para preparar en casa.</p></div>
+      <div class="filters">
+        <label class="search-box">⌕ <input id="recipeSearch" type="search" placeholder="Buscar una receta..." aria-label="Buscar recetas"></label>
+        <div class="filter-buttons" id="filterButtons">
+          <button class="filter active" data-filter="Todas">Todas</button>
+          <button class="filter" data-filter="Bizcochos">Bizcochos</button>
+          <button class="filter" data-filter="Galletas">Galletas</button>
+          <button class="filter" data-filter="Postres">Postres</button>
+        </div>
+      </div>
+      <div class="recipe-grid" id="allRecipes"></div>
+      <p class="empty-state" id="emptyState" hidden>No encontramos recetas con esa búsqueda. Prueba con otra palabra. 💗</p>
+      <p class="small-note">Las recetas de ejemplo son una base inicial que puedes editar y ampliar con tus propias preparaciones.</p>
+    </section>
+
+    <section class="page" id="page-consejos" hidden>
+      <div class="page-intro"><span class="eyebrow">TRUCOS DE REPOSTERÍA</span><h1>Pequeños detalles, grandes resultados</h1><p>Consejos básicos para sentirte más segura en la cocina.</p></div>
+      <div class="tips-list">
+        <article class="tip"><span>⚖️</span><div><h3>1. Mide los ingredientes</h3><p>En repostería las cantidades importan. Siempre que puedas, utiliza una báscula y respeta las medidas de la receta.</p></div></article>
+        <article class="tip"><span>🌡️</span><div><h3>2. Cuida la temperatura</h3><p>Si la receta indica ingredientes a temperatura ambiente, sácalos con anticipación. No todos los ingredientes se comportan igual cuando están fríos.</p></div></article>
+        <article class="tip"><span>🥣</span><div><h3>3. No mezcles de más</h3><p>Cuando incorpores la harina, mezcla solo hasta integrar. Batir demasiado puede cambiar la textura de algunas masas.</p></div></article>
+        <article class="tip"><span>🔥</span><div><h3>4. Precalienta el horno</h3><p>Enciende el horno con el tiempo indicado y evita abrirlo constantemente, sobre todo durante los primeros minutos de horneado.</p></div></article>
+        <article class="tip"><span>🧁</span><div><h3>5. Deja enfriar antes de decorar</h3><p>Un bizcocho caliente puede derretir la cobertura. Espera a que esté completamente frío antes de añadir crema o frosting.</p></div></article>
+      </div>
+    </section>
+
+    <section class="page" id="page-calendario" hidden>
+      <div class="page-intro"><span class="eyebrow">LO QUE VIENE</span><h1>Calendario dulce</h1><p>Una propuesta de temas para organizar las próximas publicaciones.</p></div>
+      <div class="calendar-wrap"><table><thead><tr><th>Publicación</th><th>Tema</th><th>Contenido</th></tr></thead><tbody>
+        <tr><td>Semana 1</td><td>Bizcochos</td><td>Receta básica y trucos para que quede esponjoso.</td></tr>
+        <tr><td>Semana 2</td><td>Galletas</td><td>Galletas caseras y variaciones de sabores.</td></tr>
+        <tr><td>Semana 3</td><td>Postres fríos</td><td>Ideas fáciles que no necesitan horno.</td></tr>
+        <tr><td>Semana 4</td><td>Técnicas</td><td>Cómo preparar y utilizar cremas para decorar.</td></tr>
+        <tr><td>Especial</td><td>Fechas festivas</td><td>Postres para cumpleaños, Navidad y ocasiones especiales.</td></tr>
+      </tbody></table></div>
+      <p class="small-note">Puedes cambiar los temas y las fechas según tu ritmo de publicación.</p>
+    </section>
+
+    <section class="page" id="page-sobre-mi" hidden>
+      <div class="page-intro"><span class="eyebrow">UN POCO SOBRE ESTE ESPACIO</span><h1>¡Hola, bienvenida a mi cocina!</h1></div>
+      <div class="about-card"><div class="about-emoji">👩‍🍳</div><div><h2>Esto es Dulce Hogar</h2><p>Dulce Hogar es un blog dedicado a las recetas y al mundo de la repostería. Aquí quiero reunir preparaciones dulces, ideas para ocasiones especiales y consejos que ayuden a disfrutar más el tiempo en la cocina.</p><p>La idea es aprender, experimentar y compartir ese resultado que hace que valga la pena encender el horno.</p><p class="signature">Con cariño, Dulce Hogar ♡</p></div></div>
+      <div class="contact-box"><h2>¿Tienes una idea o sugerencia?</h2><p>Próximamente podrás añadir aquí tu correo o tus redes sociales para que tus lectores puedan contactarte.</p></div>
+    </section>
+  </main>
+
+  <footer><span>🧁 Dulce Hogar</span><p>Recetas, creatividad y mucho cariño.</p><small>© <span id="year"></span> Dulce Hogar. Hecho con amor.</small></footer>
+</div>
+
+<div class="modal" id="recipeModal" aria-hidden="true">
+  <div class="modal-backdrop" data-close></div>
+  <article class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <button class="modal-close" id="modalClose" aria-label="Cerrar">×</button>
+    <div id="modalContent"></div>
+  </article>
+</div>
+<script src="js/script.js"></script>
+</body>
+</html>
